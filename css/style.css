@@ -1,14 +1,19 @@
-/********* Reset *********/
-
-html {
-  box-sizing: border-box;
-  font-size: 16px;
-}
+/*********************************/
+/************* RESET *************/
+/*********************************/
 
 *,
 *:before,
 *:after {
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Open Sans", sans-serif;
+  min-height: 100vh;
 }
 
 body,
@@ -21,9 +26,8 @@ h6,
 p,
 ol,
 ul {
-  margin: 0;
-  padding: 0;
   font-weight: normal;
+  font-size: 16px;
 }
 
 a {
@@ -40,12 +44,13 @@ img {
   height: auto;
 }
 
-/********* Common *********/
-
-html {
-  font-size: 62.5%;
-  font-family: "Open Sans", sans-serif;
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
 }
+
+/*********************************/
+/************ COMMON ************/
+/*******************************/
 
 body {
   background-color: #f5f5dc;
@@ -70,103 +75,33 @@ ul {
 button {
   border-radius: 4rem;
   padding: 1rem 4rem;
-}
-
-/********* Header *********/
-
-header {
-  height: 9.5rem;
-  background-color: #000000; /*color temporal para poder visualizar los items*/
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.logoContainer {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-
-.logoImg {
-  width: 8rem;
-  padding-right: 1rem;
-}
-
-.titleContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: right;
-}
-
-.upperTitle {
-  font-size: 2rem;
-  margin-right: 2.5rem;
-  font-family: "Raleway", sans-serif;
-}
-
-.lowerTitle {
-  font-size: 2rem;
-  margin-left: 2.5rem;
-  font-family: "Raleway", sans-serif;
-}
-
-.titleInWhite {
-  color: #ffffff;
-}
-
-.titleInFardos {
-  color: #ffd69e;
-}
-
-/* Nav */
-nav ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-nav li {
-  margin-right: 4rem;
-}
-
-nav a {
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 1.6rem;
+  color: white;
+  border-color: #ffffff;
+  background-color: transparent;
+  font-size: 1.4rem;
   text-transform: uppercase;
 }
 
-nav a:hover {
-  text-decoration: underline;
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1.375rem;
+  max-width: 1440px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
 }
 
-/********* Footer *********/
-
-footer {
-  background-color: #435524;
-  color: #ffffff;
-  height: 25rem;
+@media screen and (min-width: 769px) {
+  .grid-container {
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 0.625rem;
+    max-width: 1200px;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+  }
 }
-
-.footerLogoContainer {
-  display: flex;
-}
-
-.footerButton {
-  border: 0.1rem solid #ffffff;
-  background-color: transparent;
-}
-
-.footerButton small {
-  color: #ffffff;
-}
-
-/*********************************/
-/************* COMMON *************/
-/*********************************/
 
 .articlePhoto {
   width: 100%;
@@ -182,13 +117,155 @@ footer {
   list-style-type: disc;
   margin-top: 2rem;
 }
-p {
-  margin-top: 2rem;
-}
 
 .articleTitle {
   font-weight: 600;
   font-size: 4rem;
+}
+
+/*********************************/
+/************ HEADER ************/
+/*******************************/
+
+header {
+  height: 9.5rem;
+  background-color: #000000; /*color temporal para poder visualizar los items*/
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 1rem;
+}
+
+.logoContainer img {
+  width: 8rem;
+}
+
+.logoContainer h1 {
+  font-size: 2rem;
+  font-family: "Raleway", sans-serif;
+  color: #ffd69e;
+}
+
+.logoContainer h1 span {
+  padding-left: 2rem;
+}
+
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right;
+}
+
+.titleInWhite {
+  color: #ffffff;
+}
+
+.titleInFardos {
+  color: #ffd69e;
+}
+
+/**** Nav *****/
+
+.navContainer ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 3.5rem;
+}
+
+@media screen and (max-width: 767px) {
+  .navContainer ul {
+    gap: 4rem;
+    background-color: #9cd0af;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.35s ease-out;
+    transform: translateX(100%);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navContainer ul {
+    gap: 4rem;
+  }
+}
+
+.navContainer a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
+.navContainer a:hover {
+  text-decoration: underline;
+}
+
+/*********************************/
+/************ FOOTER ************/
+/*******************************/
+
+footer {
+  background-color: #435524;
+  padding-block: 4.5rem;
+  color: #ffffff;
+  height: 25rem;
+}
+
+footer h3 {
+  font-size: 2rem;
+  font-family: "Raleway", sans-serif;
+  color: #ffffff;
+}
+
+footer h3 span {
+  padding-left: 4.5rem;
+}
+
+footer .footer-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 1.375rem;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 1.375rem;
+  padding-right: 1.375rem;
+}
+
+@media screen and (min-width: 768px) {
+  .footer .footer-grid {
+    grid-template-columns: repeat(16, 1fr);
+    grid-gap: 0.625rem;
+    max-width: 1440px;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+  }
+}
+
+footer .footer-logo {
+  grid-column: span 2;
+  text-align: center;
+}
+
+footer .footer-logo img {
+  max-width: 12rem;
+  width: 100%;
+  height: auto;
 }
 
 /*********************************/
@@ -205,7 +282,8 @@ p {
   padding: 7.5rem 0;
 }
 
-/* Front Image */
+/***** FRONT IMG *****/
+
 .frontImgSection {
   background-color: #000;
   height: 102.4rem;
@@ -223,12 +301,87 @@ p {
   box-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
 }
 
-/* Who are we */
-.whoareweSection {
+/***** WHO ARE WE *****/
+
+.who-are-we {
   background-color: #f5f5dc;
+  padding-block: 4.5rem;
 }
 
-/* Why volunteer */
-.whyvolunteerSection {
+.who-are-we .block {
+  grid-column: span 4;
+}
+
+.who-are-we section {
+  align-items: center;
+}
+
+.who-are-we section {
+  align-items: center;
+}
+
+.who-are-we .block.left h2 {
+  font-size: 6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+}
+
+.who-are-we .block.left h2 span {
+  font-size: 3rem;
+  font-weight: 400;
+  padding-left: 4.5rem;
+}
+
+.who-are-we .block.right img {
+  width: 100%;
+  height: auto;
+}
+
+/***** WHY VOLUNTEER *****/
+
+.why-volunteer {
   background-color: #ffd69e;
+  padding-block: 4.5rem;
+}
+
+.why-volunteer .block {
+  grid-column: span 4;
+  order: 2;
+}
+
+.why-volunteer section {
+  align-items: center;
+}
+
+.why-volunteer .block.left h2 {
+  font-size: 6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+}
+
+.why-volunteer .block.left h2 span {
+  font-size: 3rem;
+  font-weight: 400;
+  padding-left: 4.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .why-volunteer .block.left {
+    grid-column: 5/9;
+    order: 2;
+    margin-left: 2rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .why-volunteer .block.right {
+    grid-column: 1/5;
+    order: 1;
+  }
+}
+
+.why-volunteer .block.right img {
+  width: 100%;
+  height: auto;
 }

@@ -15,11 +15,8 @@
     <header>
       <a href="./index.html">
         <div class="logoContainer">
-          <img class="logoImg" src="./assets/logo-fardos.svg" alt="logo" />
-          <div class="titleContainer titleInFardos">
-            <h1 class="upperTitle">Horse care</h1>
-            <h1 class="lowerTitle">and rescue</h1>
-          </div>
+          <img src="./assets/logo-fardos.svg" alt="logo" />
+          <h1>Horse care <br /><span>and rescue</span></h1>
         </div>
       </a>
       <nav class="navContainer">
@@ -52,54 +49,67 @@
           <img src="./assets/photo-main.jpg" alt="photo-main" />
         </div>
       </section>
-      <section class="whoareweSection">
-        <div class="textContainer">
-          <p>WHO ARE WE?</p>
-          <p>
-            We are a non-profit civil association that works every day in the
-            rehabilitation of mistreated equines which are rescued in emergency,
-            negligence or abandonment situations. We are committed to raising
-            awareness in society in order to eradicate the problem of animal
-            blood traction and equine slaughter. We invite you to get to know us
-            better.
-          </p>
-        </div>
-        <div class="photoContainer">
-          <img src="./assets/photo-main-whoarewe.jpg" alt="horse-resting" />
-        </div>
-      </section>
-      <section class="whyvolunteerSection">
-        <div class="photoContainer">
-          <img src="./assets/photo-main-whyvolunteer.jpg" alt="wild-horses" />
-        </div>
-        <div class="textContainer">
-          <p>WHY VOLUNTEER?</p>
-          <p>
-            Become a horse guardian. Accompany them from their rescue and
-            throughout their rehabilitation until their full recovery.
-          </p>
-        </div>
-      </section>
+      <div class="who-are-we">
+        <section class="grid-container">
+          <div class="block left">
+            <h2>Who<br /><span>are we?</span></h2>
+            <p>
+              We are a non-profit civil association that works every day in the
+              rehabilitation of mistreated equines which are rescued in
+              emergency, negligence or abandonment situations.
+            </p>
+            <p>
+              We are committed to raising awareness in society in order to
+              eradicate the problem of animal blood traction and equine
+              slaughter. We invite you to get to know us better.
+            </p>
+          </div>
+          <div class="block right">
+            <img
+              src="./assets/photo-main-whoarewe.jpg"
+              alt="Who are we image"
+            />
+          </div>
+        </section>
+      </div>
+
+      <div class="why-volunteer">
+        <section class="grid-container">
+          <div class="block left">
+            <h2>Why<br /><span>volunteer?</span></h2>
+            <p>
+              Become a horse guardian. Accompany them from their rescue and
+              throughout their rehabilitation until their full recovery.
+            </p>
+          </div>
+          <div class="block right">
+            <img
+              src="./assets/photo-main-whyvolunteer.jpg"
+              alt="Why volunteer photo"
+            />
+          </div>
+        </section>
+      </div>
     </main>
+
     <footer>
-      <div class="footerLogoContainer">
-        <img class="logoImg" src="./assets/logo-blanco.svg" alt="logo" />
-        <div class="titleContainer titleInWhite">
-          <h1 class="upperTitle">Horse care</h1>
-          <h1 class="lowerTitle">and rescue</h1>
+      <div class="footer-grid">
+        <div class="footer-logo">
+          <img src="./assets/logo-blanco.svg" alt="White logo" />
+          <h3>Horse care <br /><span>and rescue</span></h3>
         </div>
-      </div>
-      <div>
-        <button class="footerButton"><small>GET INVOLVED</small></button>
-        <button class="footerButton"><small>DONATE NOW</small></button>
-      </div>
-      <div>
-        <p>Keep in touch!</p>
+        <div class="footer__button">
+            <button>Get involved</button>
+            <button>Donate now</button>
+        </div>
+        <div class="footer__social-media">
+        <h3>Keep in touch!</h3>
         <img src="./assets/facebook-circle.png" alt="Facebook" />
         <img src="./assets/instagram-circle.png" alt="Instagram" />
         <img src="./assets/twitter-circle.png" alt="Twitter" />
         <img src="./assets/youtube-circle.png" alt="Youtube" />
       </div>
     </footer>
+
   </body>
 </html>
