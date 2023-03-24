@@ -13,47 +13,59 @@
   </head>
 
   <body>
-    <header>
-      <a href="../index.html">
-        <div class="logoContainer">
-          <img src="../assets/logo-fardos.svg" alt="logo" />
-          <h1>Horse care <br /><span>and rescue</span></h1>
+    <header class="header">
+      <a href="../index.html" class="header__logo-link">
+        <div class="header__logo-container">
+          <img
+            src="../assets/logo-fardos.svg"
+            alt="logo"
+            class="header__logo-image"
+          />
+          <h1 class="header__title">
+            Horse care <br /><span class="header__subtitle">and rescue</span>
+          </h1>
         </div>
       </a>
-      <nav class="navContainer">
-        <ul>
-          <li>
-            <a href="../pages/mission.html"> Mission </a>
+      <nav class="header__nav-container">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a href="../pages/mission.html" class="header__nav-link">
+              Mission
+            </a>
           </li>
-          <li>
-            <a href="../pages/volunteer.html"> Volunteer </a>
+          <li class="header__nav-item">
+            <a href="../pages/volunteer.html" class="header__nav-link">
+              Volunteer
+            </a>
           </li>
-          <li>
-            <a href="../pages/donate.html"> Donate </a>
+          <li class="header__nav-item">
+            <a href="../pages/donate.html" class="header__nav-link"> Donate </a>
           </li>
-          <li>
-            <a href="../pages/contact.html"> Contact </a>
+          <li class="header__nav-item">
+            <a href="../pages/contact.html" class="header__nav-link">
+              Contact
+            </a>
           </li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <section class="article-photo">
+      <section class="article__photo">
         <img src="../assets/photo-mission.jpg" alt="stable horses" />
       </section>
 
-      <article class="article-grid">
-        <h2 class="article-title">Our mission</h2>
-        <div class="article-left">
-          <p>
+      <article class="article__grid">
+        <h2 class="article__title">Our mission</h2>
+        <div class="article__left">
+          <p class="article__text">
             We are a dedicated and passionate civil association committed to
             rescuing and rehabilitating horses in need. Our organization was
             founded with the goal of providing a safe haven for horses that have
             been mistreated, neglected, or abandoned, and to raise awareness in
             society about the mistreatment of equines.
           </p>
-          <p>
+          <p class="article__text">
             Our team of dedicated volunteers and staff work tirelessly to
             provide the best possible care for every horse that comes into our
             care. We provide medical treatment, rehabilitation, and training to
@@ -61,15 +73,15 @@
             and find new homes with loving families.
           </p>
         </div>
-        <div class="article-right">
-          <p>
+        <div class="article__right">
+          <p class="article__text">
             In addition to our rescue and rehabilitation efforts, we are also
             dedicated to raising awareness about the issue of animal blood
             traction and equine slaughter. We believe that education and
             advocacy are key to creating a world in which all horses are treated
             with kindness, respect, and dignity.
           </p>
-          <p>
+          <p class="article__text">
             We invite you to join us in our mission. Whether you can donate your
             time, resources, or simply spread the word about our work, every
             little bit helps. Together, we can create a brighter future for
@@ -80,22 +92,40 @@
       </article>
     </main>
 
-    <footer>
-      <div class="footer-grid">
-        <div class="footer-logo">
+    <footer class="footer">
+      <div class="footer__grid">
+        <div class="footer__logo">
           <img src="../assets/logo-blanco.svg" alt="White logo" />
-          <h3>Horse care <br /><span>and rescue</span></h3>
+          <h3 class="footer__title">
+            Horse care <br /><span class="footer__subtitle">and rescue</span>
+          </h3>
         </div>
-        <div class="footer-button">
-          <button>Get involved</button>
-          <button>Donate now</button>
+        <div class="footer__button">
+          <button class="footer__cta">Get involved</button>
+          <button class="footer__cta">Donate now</button>
         </div>
         <div class="footer__social-media">
-          <h3>Keep in touch!</h3>
-          <img src="../assets/facebook-circle.png" alt="Facebook" />
-          <img src="../assets/instagram-circle.png" alt="Instagram" />
-          <img src="../assets/twitter-circle.png" alt="Twitter" />
-          <img src="../assets/youtube-circle.png" alt="Youtube" />
+          <h3 class="footer__heading">Keep in touch!</h3>
+          <img
+            src="../assets/facebook-circle.png"
+            alt="Facebook"
+            class="footer__icon"
+          />
+          <img
+            src="../assets/instagram-circle.png"
+            alt="Instagram"
+            class="footer__icon"
+          />
+          <img
+            src="../assets/twitter-circle.png"
+            alt="Twitter"
+            class="footer__icon"
+          />
+          <img
+            src="../assets/youtube-circle.png"
+            alt="Youtube"
+            class="footer__icon"
+          />
         </div>
       </div>
     </footer>

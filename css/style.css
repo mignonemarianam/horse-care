@@ -41,10 +41,6 @@ body {
   background-color: #f5f5dc;
 }
 
-h1 {
-  font-size: 6rem;
-}
-
 p {
   font-size: 1.6rem;
 }
@@ -86,7 +82,7 @@ button {
 /************ HEADER ************/
 /*******************************/
 
-header {
+.header {
   height: 9.5rem;
   background-color: #000000; /*color temporal para poder visualizar los items*/
   display: flex;
@@ -94,54 +90,48 @@ header {
   align-items: center;
 }
 
-.logoContainer {
+.header__logo-link {
+  text-decoration: none;
+}
+
+.header__logo-container {
   display: flex;
   align-items: center;
   cursor: pointer;
   gap: 1rem;
 }
 
-.logoContainer img {
+.header__logo-image {
   width: 8rem;
 }
 
-.logoContainer h1 {
+.header__title {
   font-size: 2rem;
   font-family: "Raleway", sans-serif;
   color: #ffd69e;
 }
 
-.logoContainer h1 span {
+.header__subtitle {
   padding-left: 2rem;
 }
 
-.titleContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: right;
+.header__nav-container {
 }
 
-.titleInWhite {
-  color: #ffffff;
-}
-
-.titleInFardos {
-  color: #ffd69e;
-}
-
-/**** Nav *****/
-
-.navContainer ul {
+.header__nav-list {
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
   gap: 3.5rem;
+  font-size: 1.6rem;
 }
 
-/* @media screen and (max-width: 767px) {
-  .navContainer ul {
+.header__nav-list {
+}
+
+@media screen and (max-width: 767px) {
+  .header__nav-list {
     gap: 4rem;
     background-color: #9cd0af;
     position: absolute;
@@ -155,22 +145,25 @@ header {
     transition: all 0.35s ease-out;
     transform: translateX(100%);
   }
-} */
+}
 
-/* @media screen and (min-width: 768px) {
-  .navContainer ul {
+@media screen and (min-width: 768px) {
+  .header__nav-list {
     gap: 4rem;
   }
-} */
+}
 
-.navContainer a {
+.header__nav-item {
+}
+
+.header__nav-link {
   text-decoration: none;
   color: #ffffff;
   font-size: 1.6rem;
   text-transform: uppercase;
 }
 
-.navContainer a:hover {
+.header__nav-link:hover {
   text-decoration: underline;
 }
 
@@ -178,28 +171,23 @@ header {
 /************ FOOTER ************/
 /*******************************/
 
-footer {
+.footer {
   background-color: #435524;
   padding-block: 4.5rem;
   color: #ffffff;
 }
 
-footer h3 {
+.footer__title {
   font-size: 2rem;
   font-family: "Raleway", sans-serif;
   color: #ffffff;
 }
 
-footer h3 span {
+.footer__subtitle {
   padding-left: 4.5rem;
 }
 
-footer .footer-container {
-  display: flex;
-  justify-content: center;
-}
-
-footer .footer-grid {
+.footer__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -212,32 +200,31 @@ footer .footer-grid {
 }
 
 @media screen and (min-width: 768px) {
-  footer .footer-grid {
+  .footer__grid {
     grid-template-columns: repeat(8, 1fr);
     justify-content: center;
   }
 }
 
-footer .footer-logo {
+.footer__logo {
   grid-column: 1/3;
   text-align: center;
 }
 
-footer .footer-logo img {
+.footer__logo img {
   max-width: 12rem;
   width: 100%;
   height: auto;
 }
 
 @media screen and (min-width: 768px) {
-  footer .footer-logo {
+  .footer__logo {
     grid-column: 2/4;
     text-align: center;
-    background-color: yellow;
   }
 }
 
-footer .footer-button {
+.footer__button {
   grid-column: 3/5;
   display: flex;
   flex-direction: column;
@@ -245,15 +232,14 @@ footer .footer-button {
   justify-content: space-evenly;
 }
 
-footer .footer-button button {
+.footer__cta {
   color: white;
   border-color: #ffffff;
   background-color: transparent;
 }
 
 @media screen and (min-width: 768px) {
-  footer .footer-button {
-    background-color: red;
+  .footer__button {
     grid-column: 4/8;
     grid-row: 1;
     flex-direction: row;
@@ -261,7 +247,7 @@ footer .footer-button button {
   }
 }
 
-footer .footer__social-media {
+.footer__social-media {
   grid-column: 1/5;
   grid-row: 2;
   align-self: center;
@@ -269,14 +255,13 @@ footer .footer__social-media {
 }
 
 @media screen and (min-width: 768px) {
-  footer .footer__social-media {
-    background-color: blue;
+  .footer__social-media {
     grid-column: 2/8;
     grid-row: 2;
   }
 }
 
-footer .footer__social-media img {
+.footer__icon {
   margin: 2.4rem 4rem 0rem 0rem;
 }
 
@@ -284,14 +269,7 @@ footer .footer__social-media img {
 /************* INDEX *************/
 /*********************************/
 
-.textContainer {
-  width: 50%;
-  padding: 7.5rem 0;
-}
-
-.photoContainer {
-  width: 50%;
-  padding: 7.5rem 0;
+.main {
 }
 
 .grid-container {
@@ -305,47 +283,56 @@ footer .footer__social-media img {
   padding-right: 1.6rem;
 }
 
-@media screen and (min-width: 768px) {
-  .grid-container {
-    grid-template-columns: repeat(8, 1fr);
-  }
-}
-
-/***** FRONT IMG *****/
-
-.frontImgSection {
+.front-img-section {
   background-color: #000;
   max-height: 50rem;
   overflow: hidden;
 }
 
-.frontTextContainer p {
+.front-text-container {
+}
+
+.front-text-container__text {
   color: #f5f5dc;
   font-weight: 600;
   font-size: 6rem;
 }
 
-.frontButtonContainer button {
+.front-text-container {
+}
+
+.front-button-container__cta {
   background-color: #f5f5dc;
   box-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
 }
-
-/***** WHO ARE WE *****/
 
 .who-are-we {
   background-color: #f5f5dc;
   padding-block: 7.5rem;
 }
 
+@media screen and (min-width: 768px) {
+  .who-are-we .grid-container {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+
 .who-are-we section {
   align-items: center;
 }
 
-.who-are-we .block.left {
+.who-are-we .block--left {
   grid-column: 1/-1;
 }
 
-.who-are-we .block.left h2 {
+@media screen and (min-width: 768px) {
+  .who-are-we .block--left {
+    padding-right: 5rem;
+    grid-column: 1/5;
+  }
+}
+
+.who-are-we .block--left .block__title {
   font-size: 6rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -353,31 +340,24 @@ footer .footer__social-media img {
   line-height: 1;
 }
 
-.who-are-we .block.left h2 span {
+.who-are-we .block--left .block__subtitle {
   display: block;
   font-size: 3rem;
   font-weight: 400;
   padding-left: 4.5rem;
 }
 
-.who-are-we .block.right {
+.who-are-we .block--right {
   grid-column: 1/-1;
 }
 
-.who-are-we .block.right img {
+.who-are-we .block--right img {
   width: 100%;
   height: auto;
 }
 
 @media screen and (min-width: 768px) {
-  .who-are-we .block.left {
-    padding-right: 5rem;
-    grid-column: 1/5;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .who-are-we .block.right {
+  .who-are-we .block--right {
     padding-left: 5rem;
     grid-column: 5/9;
   }
@@ -390,15 +370,21 @@ footer .footer__social-media img {
   padding-block: 7.5rem;
 }
 
+@media screen and (min-width: 768px) {
+  .why-volunteer .grid-container {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+
 .why-volunteer section {
   align-items: center;
 }
 
-.why-volunteer .block.left {
+.why-volunteer .block--left {
   grid-column: 1/-1;
 }
 
-.why-volunteer .block.left h2 {
+.why-volunteer .block--left .block__title {
   font-size: 6rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -406,32 +392,30 @@ footer .footer__social-media img {
   line-height: 1;
 }
 
-.why-volunteer .block.left h2 span {
+.why-volunteer .block--left .block__subtitle {
   display: block;
   font-size: 3rem;
   font-weight: 400;
   padding-left: 4.5rem;
 }
 
-.why-volunteer .block.right {
+.why-volunteer .block--right {
   grid-column: 1/-1;
 }
 
-.why-volunteer .block.right img {
+.why-volunteer .block--right img {
   width: 100%;
   height: auto;
 }
 
 @media screen and (min-width: 768px) {
-  .why-volunteer .block.left {
+  .why-volunteer .block--left {
     padding-left: 5rem;
     order: 2;
     grid-column: 5/9;
   }
-}
 
-@media screen and (min-width: 768px) {
-  .why-volunteer .block.right {
+  .why-volunteer .block--right {
     padding-right: 5rem;
     grid-column: 1/5;
   }
@@ -441,13 +425,13 @@ footer .footer__social-media img {
 /*********** ARTICLES ***********/
 /*******************************/
 
-.article-photo {
+.article__photo {
   width: 100%;
   max-height: 51rem;
   overflow: hidden;
 }
 
-.article-grid {
+.article__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 1rem;
@@ -460,12 +444,12 @@ footer .footer__social-media img {
 }
 
 @media screen and (min-width: 768px) {
-  .article-grid {
+  .article__grid {
     grid-template-columns: repeat(8, 1fr);
   }
 }
 
-.article-title {
+.article__title {
   grid-column: 1/-1;
   font-weight: 600;
   font-size: 4rem;
@@ -474,64 +458,82 @@ footer .footer__social-media img {
   text-transform: uppercase;
 }
 
-.article-left {
+.article__left {
   grid-column: 1/-1;
 }
 
 @media screen and (min-width: 768px) {
-  .article-left {
+  .article__left {
     grid-column: 1/5;
   }
 }
 
-.article-left p {
+.article__left .article__text {
   margin-bottom: 2rem;
 }
 
-.article-right {
-  grid-column: 1/-1;
-}
-
-@media screen and (min-width: 768px) {
-  .article-right {
-    grid-column: 5/9;
-  }
-}
-
-.article-right ul,
-.article-left ul {
-  list-style: disc;
-  padding-left: 2rem;
-}
-
-.article-right ul li::marker,
-.article-left ul li::marker {
-  font-size: 1.8rem;
-}
-
-.article-right p {
-  margin-bottom: 2rem;
-}
-
-.article-right p:first-child {
+.article__left .article__text:first-child {
   margin-top: 1rem;
 }
 
-.article-right p:last-child {
+.article__left .article__text:last-child {
   margin-bottom: 0;
 }
 
 @media screen and (min-width: 768px) {
-  .article-right p:first-child {
+  .article__left .article__text:first-child {
     margin-top: 0;
   }
 
-  .article-right p:last-child {
+  .article__left .article__text:last-child {
     margin-bottom: 0;
   }
 }
 
-.article-right ul {
+.article__right {
+  grid-column: 1/-1;
+}
+
+@media screen and (min-width: 768px) {
+  .article__right {
+    grid-column: 5/9;
+  }
+}
+
+.article__right .article__list,
+.article__left .article__list {
+  list-style: disc;
+  padding-left: 2rem;
+}
+
+.article__right .article__list .article__item::marker,
+.article__left .article__list .article__item::marker {
+  font-size: 1.8rem;
+}
+
+.article__right .article__text {
+  margin-bottom: 2rem;
+}
+
+.article__right .article__text:first-child {
+  margin-top: 1rem;
+}
+
+.article__right .article__text:last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .article__right .article__text:first-child {
+    margin-top: 0;
+  }
+
+  .article__right .article__text:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.article__right .article__list {
   margin-bottom: 2rem;
 }
 
