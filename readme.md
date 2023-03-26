@@ -20,3 +20,7 @@ To view the website, simply open the index.html file in a web browser.
 ## Credits
 
 This project was created by Mariana Mignone. Any images or information used on this website were sourced from public domain or with appropriate credits given.
+
+## Entregas
+
+Segunda pre-entrega: 26-03-2023
