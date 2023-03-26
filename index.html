@@ -9,60 +9,70 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@600&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
     <title>Horse Care and Rescue</title>
   </head>
 
   <body>
     <header class="header">
-      <a href="./index.html" class="header__logo-link">
-        <div class="header__logo-container">
-          <img
-            src="./assets/logo-fardos.svg"
-            alt="logo"
-            class="header__logo-image"
-          />
-          <h1 class="header__title">
-            Horse care <br /><span class="header__subtitle">and rescue</span>
-          </h1>
-        </div>
-      </a>
-      <nav class="header__nav-container">
-        <ul class="header__nav-list">
-          <li class="header__nav-item">
-            <a href="./pages/mission.html" class="header__nav-link">
-              Mission
-            </a>
-          </li>
-          <li class="header__nav-item">
-            <a href="./pages/volunteer.html" class="header__nav-link">
-              Volunteer
-            </a>
-          </li>
-          <li class="header__nav-item">
-            <a href="./pages/donate.html" class="header__nav-link"> Donate </a>
-          </li>
-          <li class="header__nav-item">
-            <a href="./pages/contact.html" class="header__nav-link">
-              Contact
-            </a>
-          </li>
-        </ul>
-      </nav>
+      <div class="grid-container">
+        <a href="./index.html" class="header__logo-link">
+          <div class="header__logo-container">
+            <img
+              src="./assets/logo-fardos.svg"
+              alt="logo"
+              class="header__logo-image"
+            />
+            <h1 class="header__title">
+              Horse care <br /><span class="header__subtitle">and rescue</span>
+            </h1>
+          </div>
+        </a>
+        <input class="menu__input" type="checkbox" name="" id="toggle" />
+        <label class="menu__label" for="toggle"
+          ><i class="material-icons">menu</i></label
+        >
+        <nav class="header__nav-container">
+          <ul class="header__nav-list">
+            <li>
+              <a href="./pages/mission.html" class="header__nav-link">
+                Mission
+              </a>
+            </li>
+            <li>
+              <a href="./pages/volunteer.html" class="header__nav-link">
+                Volunteer
+              </a>
+            </li>
+            <li>
+              <a href="./pages/donate.html" class="header__nav-link">
+                Donate
+              </a>
+            </li>
+            <li>
+              <a href="./pages/contact.html" class="header__nav-link">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main class="main">
-      <section class="front-img-section">
-        <div class="front-text-container">
-          <p class="front-text-container__text">Transform your will</p>
-          <p class="front-text-container__text">INTO ACTION!</p>
-          <div class="front-button-container">
-            <button class="front-button-container__cta">DONATE NOW</button>
+      <div class="main-background">
+        <section class="front-img-section grid-container">
+          <div class="front-text-container">
+            <h2 class="front-text-container__header">
+              Transform your will <br /><span>into ACTION!</span>
+            </h2>
+            <button class="front-text-container__cta button">Donate now</button>
           </div>
-        </div>
-        <div class="front-img-container">
-          <img src="./assets/photo-main.jpg" alt="photo-main" />
-        </div>
-      </section>
+        </section>
+      </div>
       <div class="who-are-we">
         <section class="grid-container">
           <div class="block block--left">
