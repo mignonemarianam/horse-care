@@ -23,4 +23,4 @@ This project was created by Mariana Mignone. Any images or information used on t
 
 ## Entregas
 
-Segunda pre-entrega: 26-03-2023
+Segunda pre-entrega #2: 26-03-2023
