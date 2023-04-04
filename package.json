@@ -1,0 +1,22 @@
+{
+  "name": "horse-care",
+  "version": "1.0.0",
+  "description": "This project is a simple website created by Mariana Mignone to provide information about horse rescue and promote awareness of the issue.",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./scss/style.scss ./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mignonemarianam/horse-care.git"
+  },
+  "author": "Mariana M. Mignone",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mignonemarianam/horse-care/issues"
+  },
+  "homepage": "https://github.com/mignonemarianam/horse-care#readme",
+  "dependencies": {
+    "sass": "^1.60.0"
+  }
+}
