@@ -3,9 +3,9 @@
 /*******************************/
 
 .footer {
-  background-color: #435524;
+  background-color: $verdeBosque;
   padding-block: 4.5rem;
-  color: #ffffff;
+  color: white;
   display: flex;
   justify-content: center;
 }
@@ -13,7 +13,7 @@
 .footer__title {
   font-size: 2rem;
   font-family: "Raleway", sans-serif;
-  color: #ffffff;
+  color: white;
   display: block;
 }
 
@@ -79,7 +79,7 @@
 
 .footer__cta {
   color: white;
-  border-color: #ffffff;
+  border-color: white;
   background-color: transparent;
   min-width: 18rem;
   box-sizing: border-box;

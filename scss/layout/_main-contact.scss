@@ -1,0 +1,46 @@
+/*********************************/
+/*********** CONTACT ************/
+/*******************************/
+
+.contact__form {
+  grid-column: 1/-1;
+}
+
+.form-control {
+  width: 100%;
+  max-width: 100%;
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 4rem;
+  padding: 1.2rem 1.6rem;
+  margin-bottom: 2rem;
+
+  &:focus {
+    border: 1px solid black;
+    box-shadow: 0 0 5px gray;
+  }
+}
+
+.contact__form-button {
+  color: black;
+  border-color: black;
+  background-color: transparent;
+  border-radius: 4rem;
+  padding: 1rem 3.7rem;
+  text-transform: uppercase;
+
+  &:hover {
+    color: white;
+    background-color: black;
+  }
+}
+
+.map__container {
+  grid-column: 1/-1;
+  padding: 1.2rem 1.6rem;
+}
+
+.map__frame {
+  width: 100%;
+  margin-top: 4rem;
+}

@@ -34,7 +34,7 @@
 .header__title {
   font-size: 1.8rem;
   font-family: "Raleway", sans-serif;
-  color: #ffd69e;
+  color: $fardos;
   display: block;
 
   @media screen and (min-width: 768px) {
@@ -68,7 +68,7 @@
 
 .header__nav-link {
   text-decoration: none;
-  color: #ffffff;
+  color: white;
   font-size: 1.6rem;
   text-transform: uppercase;
 
@@ -104,7 +104,7 @@
     font-weight: 600;
     font-size: 3rem;
     text-align: center;
-    color: #f5f5dc;
+    color: $arena;
     margin-bottom: 4rem;
 
     @media screen and (min-width: 768px) {
@@ -121,9 +121,9 @@
     font-size: 1.4rem;
     line-height: 1.9rem;
     text-transform: uppercase;
-    color: #000000;
+    color: black;
     padding: 1rem 4rem;
-    background-color: #f5f5dc;
+    background-color: $arena;
     box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
     border-radius: 4rem;
     outline: none;
@@ -132,11 +132,11 @@
     transition: all 0.2s ease-in-out;
 
     &:hover {
-      background-color: #fbfbf0;
+      background-color: white;
     }
 
     &--button {
-      background-color: #f5f5dc;
+      background-color: $arena;
       box-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
     }
   }
@@ -161,7 +161,7 @@
     justify-content: flex-end;
     align-self: center;
     cursor: pointer;
-    color: #ffffff;
+    color: white;
     z-index: 2;
     grid-column: 4/5;
   }
@@ -176,7 +176,7 @@
 .header__nav-list {
   @media screen and (max-width: 767px) {
     gap: 4rem;
-    background-color: #9cd0af;
+    background-color: $verdeAgua;
     position: fixed;
     right: 0;
     left: 0;

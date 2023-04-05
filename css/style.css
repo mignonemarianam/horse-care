@@ -142,7 +142,7 @@ button {
 
 .header__nav-link {
   text-decoration: none;
-  color: #ffffff;
+  color: white;
   font-size: 1.6rem;
   text-transform: uppercase;
 }
@@ -193,7 +193,7 @@ button {
   font-size: 1.4rem;
   line-height: 1.9rem;
   text-transform: uppercase;
-  color: #000000;
+  color: black;
   padding: 1rem 4rem;
   background-color: #f5f5dc;
   box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
@@ -204,7 +204,7 @@ button {
   transition: all 0.2s ease-in-out;
 }
 .front-text-container__cta:hover {
-  background-color: #fbfbf0;
+  background-color: white;
 }
 .front-text-container__cta--button {
   background-color: #f5f5dc;
@@ -229,7 +229,7 @@ button {
     justify-content: flex-end;
     align-self: center;
     cursor: pointer;
-    color: #ffffff;
+    color: white;
     z-index: 2;
     grid-column: 4/5;
   }
@@ -354,22 +354,25 @@ button {
 .article__right .article__list {
   margin-bottom: 2rem;
 }
-.article__right .article__donate-buttons {
+
+.article__donate-buttons {
   grid-column: 1/-1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   gap: 2.4rem;
+  margin-top: 4rem;
 }
 @media screen and (min-width: 768px) {
-  .article__right .article__donate-buttons {
+  .article__donate-buttons {
     grid-column: 6/9;
     align-items: flex-start;
     justify-content: space-evenly;
+    margin-top: 0rem;
   }
 }
-.article__right .article__donate-buttons button {
+.article__donate-buttons button {
   color: black;
   border-color: black;
   background-color: transparent;
@@ -387,12 +390,143 @@ button {
 }
 
 /*********************************/
+/************ INDEX *************/
+/*******************************/
+.why-volunteer .block__title, .who-are-we .block__title {
+  font-size: 4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  line-height: 1;
+}
+@media screen and (min-width: 768px) {
+  .why-volunteer .block__title, .who-are-we .block__title {
+    font-size: 6rem;
+  }
+}
+
+.why-volunteer .block__subtitle, .who-are-we .block__subtitle {
+  display: block;
+  font-size: 2rem;
+  font-weight: 400;
+  padding-left: 4.5rem;
+}
+@media screen and (min-width: 768px) {
+  .why-volunteer .block__subtitle, .who-are-we .block__subtitle {
+    font-size: 3rem;
+  }
+}
+
+.why-volunteer .block--right, .why-volunteer .block--left, .who-are-we .block--right, .who-are-we .block--left {
+  grid-column: 1/-1;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .why-volunteer .block--right, .why-volunteer .block--left, .who-are-we .block--right, .who-are-we .block--left {
+    margin-bottom: 0;
+  }
+}
+
+/***** WHO ARE WE *****/
+.who-are-we {
+  background-color: #f5f5dc;
+  padding-block: 5rem;
+}
+.who-are-we section {
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .who-are-we .block--left {
+    padding-right: 5rem;
+    grid-column: 1/5;
+  }
+}
+@media screen and (min-width: 768px) {
+  .who-are-we .block--right {
+    padding-left: 5rem;
+    grid-column: 5/9;
+  }
+}
+.who-are-we .block--right img {
+  width: 100%;
+  height: auto;
+}
+/***** WHY VOLUNTEER *****/
+.why-volunteer {
+  background-color: #ffd69e;
+  padding-block: 5rem;
+}
+.why-volunteer section {
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .why-volunteer .block--left {
+    padding-left: 5rem;
+    order: 2;
+    grid-column: 5/9;
+  }
+}
+@media screen and (min-width: 768px) {
+  .why-volunteer .block--right {
+    padding-right: 5rem;
+    grid-column: 1/5;
+  }
+}
+.why-volunteer .block--right img {
+  width: 100%;
+  height: auto;
+}
+/*********************************/
+/*********** CONTACT ************/
+/*******************************/
+.contact__form {
+  grid-column: 1/-1;
+}
+
+.form-control {
+  width: 100%;
+  max-width: 100%;
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 4rem;
+  padding: 1.2rem 1.6rem;
+  margin-bottom: 2rem;
+}
+.form-control:focus {
+  border: 1px solid black;
+  box-shadow: 0 0 5px gray;
+}
+
+.contact__form-button {
+  color: black;
+  border-color: black;
+  background-color: transparent;
+  border-radius: 4rem;
+  padding: 1rem 3.7rem;
+  text-transform: uppercase;
+}
+.contact__form-button:hover {
+  color: white;
+  background-color: black;
+}
+
+.map__container {
+  grid-column: 1/-1;
+  padding: 1.2rem 1.6rem;
+}
+
+.map__frame {
+  width: 100%;
+  margin-top: 4rem;
+}
+
+/*********************************/
 /************ FOOTER ************/
 /*******************************/
 .footer {
   background-color: #435524;
   padding-block: 4.5rem;
-  color: #ffffff;
+  color: white;
   display: flex;
   justify-content: center;
 }
@@ -400,7 +534,7 @@ button {
 .footer__title {
   font-size: 2rem;
   font-family: "Raleway", sans-serif;
-  color: #ffffff;
+  color: white;
   display: block;
 }
 
@@ -470,7 +604,7 @@ button {
 
 .footer__cta {
   color: white;
-  border-color: #ffffff;
+  border-color: white;
   background-color: transparent;
   min-width: 18rem;
   box-sizing: border-box;

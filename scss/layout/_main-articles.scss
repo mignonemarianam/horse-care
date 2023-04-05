@@ -86,26 +86,28 @@
   .article__list {
     margin-bottom: 2rem;
   }
+}
 
-  .article__donate-buttons {
-    grid-column: 1/-1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.article__donate-buttons {
+  grid-column: 1/-1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2.4rem;
+  margin-top: 4rem;
+
+  @media screen and (min-width: 768px) {
+    grid-column: 6/9;
+    align-items: flex-start;
     justify-content: space-evenly;
-    gap: 2.4rem;
+    margin-top: 0rem;
+  }
 
-    @media screen and (min-width: 768px) {
-      grid-column: 6/9;
-      align-items: flex-start;
-      justify-content: space-evenly;
-    }
-
-    button {
-      color: black;
-      border-color: black;
-      background-color: transparent;
-    }
+  button {
+    color: black;
+    border-color: black;
+    background-color: transparent;
   }
 }
 
@@ -119,26 +121,3 @@
 .article__left .article__list .article__item::marker {
   font-size: 1.8rem;
 }
-
-// .article__right .article__donate-buttons {
-//   grid-column: 1/-1;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: space-evenly;
-//   gap: 2.4rem;
-// }
-
-// @media screen and (min-width: 768px) {
-//   .article__donate-buttons {
-//     grid-column: 6/9;
-//     align-items: flex-start;
-//     justify-content: space-evenly;
-//   }
-// }
-
-// .article__donate-buttons button {
-//   color: black;
-//   border-color: black;
-//   background-color: transparent;
-// }
