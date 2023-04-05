@@ -1,0 +1,18 @@
+@mixin grid-container(
+  $grid-template-columns: repeat(4, 1fr),
+  $grid-gap: 1rem,
+  $max-width: 1440px,
+  $margin-right: auto,
+  $margin-left: auto,
+  $padding-left: 1.6rem,
+  $padding-right: 1.6rem
+) {
+  display: grid;
+  grid-template-columns: $grid-template-columns;
+  grid-gap: $grid-gap;
+  max-width: $max-width;
+  margin-right: $margin-right;
+  margin-left: $margin-left;
+  padding-left: $padding-left;
+  padding-right: $padding-right;
+}

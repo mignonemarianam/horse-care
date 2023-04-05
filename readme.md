@@ -4,7 +4,7 @@ This project is a simple website created by Mariana Mignone to provide informati
 
 ## Technologies Used
 
-This website was created using HTML and CSS.
+This website was created using HTML, CSS and Bootstrap.
 
 ## Files
 

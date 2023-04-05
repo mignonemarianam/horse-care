@@ -54,22 +54,6 @@ button {
   text-transform: uppercase;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 1rem;
-  max-width: 1440px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 1.6rem;
-  padding-right: 1.6rem;
-}
-@media screen and (min-width: 768px) {
-  .grid-container {
-    grid-template-columns: repeat(8, 1fr);
-  }
-}
-
 /*********************************/
 /************ HEADER ************/
 /*******************************/
@@ -286,7 +270,14 @@ button {
 }
 @media screen and (min-width: 768px) {
   .article__grid {
+    display: grid;
     grid-template-columns: repeat(8, 1fr);
+    grid-gap: 1rem;
+    max-width: 1440px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
   }
 }
 
@@ -392,6 +383,29 @@ button {
 /*********************************/
 /************ INDEX *************/
 /*******************************/
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  max-width: 1440px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
+}
+@media screen and (min-width: 768px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 1rem;
+    max-width: 1440px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+  }
+}
+
 .why-volunteer .block__title, .who-are-we .block__title {
   font-size: 4rem;
   font-weight: 700;
@@ -555,8 +569,14 @@ button {
 }
 @media screen and (min-width: 481px) {
   .footer__grid {
+    display: grid;
     grid-template-columns: repeat(8, 1fr);
-    justify-content: center;
+    grid-gap: 1rem;
+    max-width: 1440px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
   }
 }
 
