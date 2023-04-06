@@ -1,4 +1,4 @@
-/*********************************/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@600&display=swap"); /*********************************/
 /************* RESET *************/
 /*********************************/
 *,
@@ -270,14 +270,7 @@ button {
 }
 @media screen and (min-width: 768px) {
   .article__grid {
-    display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-gap: 1rem;
-    max-width: 1440px;
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 1.6rem;
-    padding-right: 1.6rem;
   }
 }
 
@@ -392,17 +385,11 @@ button {
   margin-left: auto;
   padding-left: 1.6rem;
   padding-right: 1.6rem;
+  padding-bottom: 0rem;
 }
 @media screen and (min-width: 768px) {
   .grid-container {
-    display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-gap: 1rem;
-    max-width: 1440px;
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 1.6rem;
-    padding-right: 1.6rem;
   }
 }
 
@@ -493,6 +480,25 @@ button {
 /*********************************/
 /*********** CONTACT ************/
 /*******************************/
+/*********************************/
+/******** CONTACT BUTTON ********/
+/*******************************/
+.contact__form-button {
+  color: black;
+  border-color: black;
+  background-color: transparent;
+  border-radius: 4rem;
+  padding: 1rem 3.7rem;
+  text-transform: uppercase;
+}
+.contact__form-button:hover {
+  color: white;
+  background-color: black;
+}
+
+/*********************************/
+/******** CONTACT INPUT *********/
+/*******************************/
 .contact__form {
   grid-column: 1/-1;
 }
@@ -509,19 +515,6 @@ button {
 .form-control:focus {
   border: 1px solid black;
   box-shadow: 0 0 5px gray;
-}
-
-.contact__form-button {
-  color: black;
-  border-color: black;
-  background-color: transparent;
-  border-radius: 4rem;
-  padding: 1rem 3.7rem;
-  text-transform: uppercase;
-}
-.contact__form-button:hover {
-  color: white;
-  background-color: black;
 }
 
 .map__container {
@@ -566,17 +559,11 @@ button {
   margin-left: auto;
   padding-left: 1.6rem;
   padding-right: 1.6rem;
+  padding-bottom: 0rem;
 }
 @media screen and (min-width: 481px) {
   .footer__grid {
-    display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-gap: 1rem;
-    max-width: 1440px;
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 1.6rem;
-    padding-right: 1.6rem;
   }
 }
 

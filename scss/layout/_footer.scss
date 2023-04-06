@@ -23,11 +23,7 @@
 }
 
 .footer__grid {
-  @include grid-container();
-
-  @media screen and (min-width: 481px) {
-    @include grid-container(repeat(8, 1fr));
-  }
+  @include grid-container($media-query: 481px);
 }
 
 .footer__logo {
