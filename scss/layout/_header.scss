@@ -1,0 +1,195 @@
+/*********************************/
+/************ HEADER ************/
+/*******************************/
+
+.header {
+  height: 9.5rem;
+  padding: 1rem 1rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.header__logo-link {
+  text-decoration: none;
+  grid-column: 1/4;
+}
+
+.header__logo-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 1rem;
+}
+
+.header__logo-image {
+  width: 6rem;
+
+  @media screen and (min-width: 768px) {
+    width: 8rem;
+  }
+}
+
+.header__title {
+  font-size: 1.8rem;
+  font-family: "Raleway", sans-serif;
+  color: $fardos;
+  display: block;
+
+  @media screen and (min-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+.header__subtitle {
+  padding-left: 2rem;
+  display: block;
+}
+
+.header__nav-container {
+  grid-column: 4/5;
+  align-self: center;
+  justify-self: flex-end;
+
+  @media screen and (min-width: 768px) {
+    grid-column: 4/9;
+  }
+}
+
+.header__nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 3.5rem;
+  font-size: 1.6rem;
+}
+
+.header__nav-link {
+  text-decoration: none;
+  color: white;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.front-img-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-background {
+  background-image: url("../assets/photo-main.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.front-text-container {
+  grid-column: 1/-1;
+  max-width: 65rem;
+  margin-inline: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__header {
+    font-weight: 600;
+    font-size: 3rem;
+    text-align: center;
+    color: $arena;
+    margin-bottom: 4rem;
+
+    @media screen and (min-width: 768px) {
+      font-size: 6rem;
+    }
+
+    span {
+      text-transform: uppercase;
+    }
+  }
+
+  &__cta {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+    text-transform: uppercase;
+    color: black;
+    padding: 1rem 4rem;
+    background-color: $arena;
+    box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+    border-radius: 4rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background-color: white;
+    }
+
+    &--button {
+      background-color: $arena;
+      box-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+    }
+  }
+}
+
+/**************************************
+*********** HAMBURGUER ***************
+**************************************/
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+.menu__input,
+.menu__label {
+  display: none;
+}
+
+.menu__label {
+  @media screen and (max-width: 767px) {
+    display: flex;
+    justify-content: flex-end;
+    align-self: center;
+    cursor: pointer;
+    color: white;
+    z-index: 2;
+    grid-column: 4/5;
+  }
+}
+
+#toggle:checked ~ .header__nav-container .header__nav-list {
+  @media screen and (max-width: 767px) {
+    transform: translateX(0%);
+  }
+}
+
+.header__nav-list {
+  @media screen and (max-width: 767px) {
+    gap: 4rem;
+    background-color: $verdeAgua;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.35s ease-out;
+    transform: translateX(100%);
+  }
+
+  @media screen and (min-width: 768px) {
+    gap: 4rem;
+  }
+}

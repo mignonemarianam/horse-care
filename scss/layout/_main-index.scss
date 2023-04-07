@@ -1,0 +1,124 @@
+/*********************************/
+/************ INDEX *************/
+/*******************************/
+
+.grid-container {
+  @include grid-container();
+}
+
+%block-title {
+  font-size: 4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  line-height: 1;
+
+  @media screen and (min-width: 768px) {
+    font-size: 6rem;
+  }
+}
+
+%block-subtitle {
+  display: block;
+  font-size: 2rem;
+  font-weight: 400;
+  padding-left: 4.5rem;
+
+  @media screen and (min-width: 768px) {
+    font-size: 3rem;
+  }
+}
+
+%block-left-right {
+  grid-column: 1/-1;
+  margin-bottom: 1rem;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+  }
+}
+
+/***** WHO ARE WE *****/
+
+.who-are-we {
+  background-color: $arena;
+  padding-block: 5rem;
+
+  section {
+    align-items: center;
+  }
+
+  .block--left {
+    @extend %block-left-right;
+
+    @media screen and (min-width: 768px) {
+      padding-right: 5rem;
+      grid-column: 1/5;
+    }
+  }
+
+  .block--right {
+    @extend %block-left-right;
+
+    @media screen and (min-width: 768px) {
+      padding-left: 5rem;
+      grid-column: 5/9;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .block__title {
+    @extend %block-title;
+  }
+
+  .block__subtitle {
+    @extend %block-subtitle;
+  }
+}
+
+/***** WHY VOLUNTEER *****/
+
+.why-volunteer {
+  background-color: $fardos;
+  padding-block: 5rem;
+
+  section {
+    align-items: center;
+  }
+
+  .block--left {
+    @extend %block-left-right;
+
+    @media screen and (min-width: 768px) {
+      padding-left: 5rem;
+      order: 2;
+      grid-column: 5/9;
+    }
+  }
+
+  .block--right {
+    @extend %block-left-right;
+
+    @media screen and (min-width: 768px) {
+      padding-right: 5rem;
+      grid-column: 1/5;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .block__title {
+    @extend %block-title;
+  }
+
+  .block__subtitle {
+    @extend %block-subtitle;
+  }
+}

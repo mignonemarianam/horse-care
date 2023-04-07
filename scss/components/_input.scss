@@ -1,0 +1,22 @@
+/*********************************/
+/******** CONTACT INPUT *********/
+/*******************************/
+
+.contact__form {
+  grid-column: 1/-1;
+}
+
+.form-control {
+  width: 100%;
+  max-width: 100%;
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 4rem;
+  padding: 1.2rem 1.6rem;
+  margin-bottom: 2rem;
+
+  &:focus {
+    border: 1px solid black;
+    box-shadow: 0 0 5px gray;
+  }
+}

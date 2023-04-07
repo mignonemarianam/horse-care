@@ -1,0 +1,25 @@
+@mixin grid-container(
+  $grid-columns-mobile: 4,
+  $grid-columns-desktop: 8,
+  $grid-gap: 1rem,
+  $max-width: 1440px,
+  $media-query: 768px,
+  $margin-right: auto,
+  $margin-left: auto,
+  $padding-left: 1.6rem,
+  $padding-right: 1.6rem,
+  $padding-bottom: 0rem
+) {
+  display: grid;
+  grid-template-columns: repeat($grid-columns-mobile, 1fr);
+  grid-gap: $grid-gap;
+  max-width: $max-width;
+  margin-right: $margin-right;
+  margin-left: $margin-left;
+  padding-left: $padding-left;
+  padding-right: $padding-right;
+  padding-bottom: $padding-bottom;
+  @media screen and (min-width: $media-query) {
+    grid-template-columns: repeat($grid-columns-desktop, 1fr);
+  }
+}
