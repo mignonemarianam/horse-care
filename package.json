@@ -1,6 +1,6 @@
 {
   "name": "horse-care",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "This project is a simple website created by Mariana Mignone to provide information about horse rescue and promote awareness of the issue.",
   "main": "index.js",
   "scripts": {
