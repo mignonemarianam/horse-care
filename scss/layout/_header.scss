@@ -106,6 +106,9 @@
     text-align: center;
     color: $arena;
     margin-bottom: 4rem;
+    -webkit-animation: slide-in-blurred-top 1.5s cubic-bezier(0.23, 1, 0.32, 1)
+      both;
+    animation: slide-in-blurred-top 1.5s cubic-bezier(0.23, 1, 0.32, 1) both;
 
     @media screen and (min-width: 768px) {
       font-size: 6rem;
@@ -130,6 +133,10 @@
     border: none;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
+
+    -webkit-animation: slide-in-blurred-bottom 1.5s
+      cubic-bezier(0.23, 1, 0.32, 1) both;
+    animation: slide-in-blurred-bottom 1.5s cubic-bezier(0.23, 1, 0.32, 1) both;
 
     &:hover {
       background-color: white;
