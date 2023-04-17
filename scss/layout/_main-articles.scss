@@ -21,6 +21,8 @@
   margin: 2.4rem;
   text-transform: uppercase;
   text-align: center;
+  -webkit-animation: puff-in-top 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+  animation: puff-in-top 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) both;
 
   @media screen and (min-width: 768px) {
     font-size: 4rem;
